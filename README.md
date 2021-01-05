@@ -15,7 +15,7 @@ CREATE TABLE emails (
     id bigint UNSIGNED AUTO_INCREMENT NOT NULL,
     email varchar(320) NOT NULL,
     domain varchar(252) NOT NULL,
-    creates_at timestamp NOT NULL,
+    created_at timestamp NOT NULL,
     primary key (id)
 );
 ```
