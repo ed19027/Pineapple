@@ -5,7 +5,7 @@ This project is developed by Edvards Dergačevs for Magebit Junior/Mid - Web Dev
 
 To run the project localy on Windows OP system install WAMP server (download at www.wampserver.com).
 In installation select MySQL to be installed.
-Put this project in wamp64/www/ directory.
+Download this project form GitHub, unzip, rename this folder to 'pineapple' and put it in wamp64/www/ directory.
 Start WAMP server click on green icon and go to phpMyAdmin.
 When it's opened in browser, log in with username 'root' (no password is needed).
 Create NEW database (provide name and select utf8_general_ci unicode).
