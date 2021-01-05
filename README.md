@@ -3,10 +3,7 @@ This project is developed by Edvards Dergačevs for Magebit Junior/Mid - Web Dev
 
 #### VERSIONS
 
-WAMP server - 3.2.0
-Apache - 2.4.41
-PHP - 7.4.0
-MySQL - 8.0.18
+WAMP server - 3.2.0  Apache - 2.4.41  PHP - 7.4.0  MySQL - 8.0.18
 
 #### INSTALLATION
 
