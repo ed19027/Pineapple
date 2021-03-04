@@ -1,5 +1,5 @@
-## Subscription to Pineapple newsletters - WEB Page
-This project is developed by Edvards Dergačevs for Magebit Junior/Mid - Web Developer Test <3
+## Subscription to Pineapple newsletters
+This project is developed by Edvards Dergačevs for educational purpose
 
 #### VERSIONS
 
