@@ -1,9 +1,9 @@
 {
-    "name": "eddcr/mvc-framework",
+    "name": "eddcr/pineapple",
     "authors": [
         {
             "name": "Edvards",
-            "email": "edd.creative.2000@gmail.com"
+            "email": "edvards.dergacevs@gmail.com"
         }
     ],
     "autoload": {
