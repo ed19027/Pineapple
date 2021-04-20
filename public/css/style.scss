@@ -1,0 +1,634 @@
+$gradient: linear-gradient(180deg, #FFFFFF 0%, #F2F5FA 100%);
+$box-shadow: 0px 30px 40px rgba(19, 24, 33, 0.06);
+$social-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+
+$app-red: #d9534f;
+$app-blue: #4066A5;
+$app-darkblue: #233759;
+$app-black: #131821;
+$app-grey: #6A707B;
+$app-lightgrey: #E3E3E4;
+$app-white: #F2F5FA;
+
+$arrow-def: '/../img/ic_arrow.svg';
+$arrow-hover: '/../img/ic_arrow_blue.svg';
+$summer: '/../img/image_summer.jpg';
+
+$tablet: 1024px;
+$tablet-sm: 746px;
+$phone: 560px;
+$phone-sm: 275px;
+
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin tablet-sm {
+  @media (max-width: #{$tablet-sm}) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (max-width: #{$phone}) {
+    @content;
+  }
+}
+
+@mixin phone-sm {
+  @media (max-width: #{$phone-sm}) {
+    @content;
+  }
+}
+
+/* DOCUMENT */
+
+body {
+  margin: 0;
+  min-height: 1080px;
+  min-width: 320px;
+
+  font-family: Arial;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+
+  background: $gradient;
+
+  @include tablet {
+		min-height: 812px;
+
+    font-size: 14px;
+	
+		background: url($summer);
+		background-position: 60% 50%;
+		background-size: cover;
+		background-repeat: no-repeat;
+  }
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.link {
+  color: $app-black;
+
+  &:hover {
+    color: $app-blue;
+  }
+  &:active {
+    color: $app-darkblue;
+  }
+}
+
+/* MAIN - LAYOUT */
+
+nav {
+  position: absolute;
+  width: 480px;
+  height: 40px;
+  margin: 100px 0px 0px 100px;
+
+  z-index: 1;
+  text-decoration: none;
+
+  @include tablet {
+    position: relative;
+		width: 100%;
+		height: 66px;
+    margin: 0;
+
+		font-size: 14px;
+		background: #FFFFFF;
+  }
+}
+
+ul {
+  display: inline;
+  padding: 0;
+  list-style-type: none;
+}
+
+li.right {
+  margin-top: 16px;
+
+  @include tablet {
+    margin: 21px 20px 0px 0px	;
+  }
+  a {
+    line-height: 24px;
+    margin-left: 26px;
+    text-decoration-line: none;
+    color: #6A707B;
+
+    @include tablet {
+      margin-left: 18px;
+    }
+  }
+}
+
+li.left a {
+  position: absolute;
+  width: 118px;
+  height: 40px;
+  text-decoration-line: none;
+
+  @include tablet {
+    width: 25px;
+    height: 40px;
+    margin: 10px 0px 0px 20px;
+  }
+}
+
+#pineapple {
+  position: absolute;
+  margin: 20px 0px 0px 15px;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+h1 {
+  margin: 374px 0px 0px 140px;
+  width: 399px;
+
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 44px;
+
+  color: $app-black;
+
+  @include tablet {
+		width: 100%;
+    margin: 0;
+
+    font-size: 24px;
+		line-height: 34px;
+  }
+}
+
+h2 {
+  margin: 15px 0px 0px 140px;
+  width: 400px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  color: $app-grey;
+
+  @include tablet {
+    width: 100%;
+    margin: 10px 0 0 0;
+
+		font-size: 14px;
+		line-height: 26px;
+  }
+}
+
+/* SUBSCRIBED - VIEW */
+
+#cup {
+  margin: 269px 0 0 140px;
+
+  @include tablet { margin: 30px 0 0 20px }
+  & + h1 {
+    margin: 30px 0px 0px 140px;
+
+    @include tablet { margin: 39px 0 0 0; }
+  }
+}
+
+/* SUBSCRIPTION - VIEW */
+
+.container {
+  position: absolute;
+  width: 680px;
+  height: 1080px;
+
+  @include tablet {
+    position: relative;
+    width: 50%;
+		height: 100%;
+		margin: 188px auto;
+    padding: 30px 20px;
+	
+		background: $gradient ;
+  }
+  @include tablet-sm { width: 60%; }
+  @include phone { width: 80%; }
+
+  .line {
+    display: inline-block;
+    position: relative;
+    width: 400px;
+    height: 1px;
+    margin: 49px 0 0 140px;
+  
+    border: 0;
+    border-top: 1px solid $app-lightgrey;
+
+    @include tablet {
+      width: 100%;
+      margin: 20px 0 0 0;
+    }
+  }
+  .social-icons {
+    width: 244px;
+    height: 46px;
+    margin: 40px 0px 0px 218px;
+
+    @include tablet {
+      width: 214px;
+      height: 46px;
+      margin: 15px auto 0px auto;
+    }
+  }
+}
+
+#fb {
+  position: absolute;
+  width: 46px;
+  height: 46px;
+
+  cursor: pointer;
+
+  border: 2px solid $app-lightgrey;
+  box-sizing: border-box;
+  border-radius: 50%;
+
+  &:hover {
+    border-color: #4267B2;
+    background: #4267B2;
+    box-shadow: $social-shadow;
+
+    & > .fa-facebook-f {
+      opacity: 1;
+      color: #FFFFFF;
+    }
+  }
+  &:active {
+    border-color: #2F4A80;
+    background: #2F4A80;
+    box-shadow: $social-shadow;
+  }
+  .fa-facebook-f {
+    position: absolute;
+    top: 13px;
+    left: 16px;
+    opacity: 0.3;
+    color: #131821;
+  }
+}
+
+#ig {
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  margin-left: 66px;
+
+  font-size: 18px;
+  cursor: pointer;
+
+  border: 2px solid #E2E3E4;
+  box-sizing: border-box;
+  border-radius: 50%;
+
+  @include tablet { margin-left: 56px; }
+
+  &:hover {
+    border-color: #C13584;
+    background: #C13584;
+    box-shadow: $social-shadow;
+
+    & > .fa-instagram {
+      color: #FFFFFF;
+      opacity: 1;
+    }
+  }
+  &:active {
+    border-color: #8F2762;
+    background: #8F2762;
+    box-shadow: $social-shadow;
+  }
+  .fa-instagram {
+    position: absolute;
+    top: 12px;
+    left: 13px;
+    opacity: 0.3;
+    color: #131821;
+  }
+}
+
+#tt {
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  margin-left: 132px;
+
+  font-size: 16px;
+  cursor: pointer;
+
+  border: 2px solid #E2E3E4;
+  box-sizing: border-box;
+  border-radius: 50%;
+
+  @include tablet { margin-left: 112px ; }
+
+  &:hover {
+    border-color: #1DA1F2;
+    background: #1DA1F2;
+    box-shadow: $social-shadow;
+
+    & > .fa-twitter {
+      color: #FFFFFF;
+      opacity: 1;
+    }
+  }
+  &:active {
+    border-color: #177FBF;
+    background: #177FBF;
+    box-shadow: $social-shadow;
+  }
+  .fa-twitter {
+    position: absolute;
+    top: 13.5px;
+    left: 13px;
+    opacity: 0.3;
+    color: #131821;
+  }
+}
+
+#yt {
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  margin-left: 198px;
+
+  font-size: 15px;
+  cursor: pointer;
+
+  border: 2px solid #E2E3E4;
+  box-sizing: border-box;
+  border-radius: 50%;
+
+  @include tablet { margin-left: 168px ; }
+
+  &:hover {
+    border-color: #FF0000;
+    background: #FF0000;
+    box-shadow: $social-shadow;
+
+    & .fa-youtube {
+      color: #FFFFFF;
+      opacity: 1;
+    }
+  }
+  &:active {
+    border-color: #CC0000;
+    background: #CC0000;
+    box-shadow: $social-shadow;
+  }
+  .fa-youtube {
+    position: absolute;
+    top: 32%;
+    left: 12.5px;
+    opacity: 0.3;
+    color: #131821;
+  }
+}
+
+.background {
+  margin-left: 680px;
+  height: 1080px;
+
+  background: url($summer);
+  background-position: left center;
+  background-size: cover;
+
+  @include tablet { display: none; }
+}
+
+/* SUBSCRIPTION - VIEW */
+
+form[novalidate] {
+  position: relative;
+  width: 663px;
+  margin: 50px 0 0 100px;
+
+  @include tablet {
+    width: 100%;
+		max-width: 450px;
+		margin: 20px 0 0 0;
+  }
+}
+
+#email {
+  &.is-invalid {
+    .feedback {
+      color: $app-red;
+      margin-top: 15px;
+      margin-bottom: -33px;
+      @include tablet { margin-bottom: -10px; }
+    }
+    .input-line {
+      background: $app-red;
+    }
+    input {
+      border-color: $app-red !important;
+    }
+  }
+  .input-line {
+    position: absolute;
+    width: 4px;
+    height: 70px;
+    background: $app-blue;
+
+    @include tablet { height: 60px; }
+  }
+  input {
+    width: 663px;
+    height: 70px;
+    padding: 23px 100px 23px 44px;
+
+    font-size: 16px;
+
+    background: #FFFFFF;
+    border: 1px solid $app-lightgrey;
+    box-sizing: border-box;
+
+    @include tablet {
+      width: 100%;
+      height: 60px;
+      margin: 0;
+      padding: 18px 49px 18px 19px;
+    }
+    @include phone-sm { font-size: 13px; }
+  
+    &:focus {
+      outline: none;
+      box-shadow: $box-shadow;
+    }
+    &:hover {
+      border: 1px solid $app-blue;
+      box-shadow: $box-shadow;
+
+      & ~ button.arrow {
+        background: url($arrow-hover);
+      }
+    }
+    &::placeholder {
+      width: 227px;
+      height: 24px;
+
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+
+      color: $app-grey;
+
+      @include phone-sm { font-size: 13px; }
+    }
+  }
+  .arrow {
+    position: relative;
+    float: right;
+    width: 24px;
+    height: 14px;
+    margin: -42px 40px;
+
+    border-style: none;
+    outline: 0;
+    cursor: pointer;
+
+    background: url($arrow-def);
+
+    @include tablet {
+      margin: -37px 15px 0px 0px;
+    }
+    &:hover {
+      background: url($arrow-hover);
+    }
+  }
+}
+
+#tos {
+  position: relative;
+  width: 400px;
+  margin: 54px 0px 0px 40px;
+
+  @include tablet {
+    width: 100%;
+		margin: 20px 0 0 0;
+  }
+  &.is-invalid {
+    .cb-container {
+      .checkbox {
+        border-color: $app-red;
+      }
+    }
+    .feedback {
+      color: $app-red;
+      .link {
+        color: $app-red;
+      }
+    }
+  }
+  .cb-container {
+    display: inline;
+    position: relative;
+    width: 26px;
+    height: 26px;
+    input {
+      position: absolute;
+      top: -1.5px;
+      left: -3px;
+      height: 24px;
+      width: 24.5px;
+      z-index: 1;
+      cursor: pointer;
+      opacity: 0;
+
+      &:checked {
+        & ~ .checkbox {
+          background: $app-blue;
+          border-color: $app-blue;
+          border-radius: 3px;
+        }
+      }
+    }
+    .checkbox {
+      position: absolute;
+      width: 26px;
+      height: 26px;
+    
+      background: #FFFFFF;
+      border: 1px solid $app-lightgrey;
+      box-sizing: border-box;
+      border-radius: 3px;
+      
+      & img {
+        position: absolute;
+        top: 7px;
+        left: 5px;
+      }
+    }
+  }
+  .feedback {
+    height: 28px;
+    margin-left: 41px;
+
+    line-height: 28px;
+    color: $app-grey;
+
+    @include tablet { font-size: 15.5px; }
+  }
+}
+
+/* EMAIL LIST - VIEW */
+
+.sidenav {
+  position: absolute;
+  min-width: 15%;
+  top: 24px;
+  left: 200px;
+  padding: 10px;
+
+  z-index: 1;
+  background: #f8f8f8;
+  overflow-x: hidden;
+}
+
+table {
+	text-align: center;
+	width: 600px;
+	margin: 32px 0 0 500px;
+  padding: 0 10px;
+
+  font-size: 14px;
+  line-height: 2;
+  
+  border: 2px solid #9c9c9c;
+  border-collapse: collapse;
+
+  tr, th, td {
+    padding: 0 10px;
+
+    font-size: 14px;
+    line-height: 2;
+
+    border: 2px solid #9c9c9c;
+    border-collapse: collapse;
+  }
+}
