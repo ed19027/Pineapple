@@ -9,19 +9,25 @@ class Checkbox
 
     public Model $model;
     public string $attribute;
+    public string $value;
+
+    public string $checked;
     public string $required;
     public string $invalid;
-    public string $invalid_feedback;
-    public string $message = 'I agree to';
+    public string $feedback = 'I agree to';
 
 
-    public function __construct(Model $model, string $attribute)
-    {
+    public function __construct(
+        Model $model,
+        string $attribute,
+        string $value
+    ) {
         $this->model = $model;
         $this->attribute = $attribute;
+        $this->value = $value;
+        $this->checked = '';
         $this->required = '';
-        $this->invalid = $model->hasError($attribute) ? 'is-invalid' : '';
-        $this->invalid_feedback = $model->hasError($attribute) ? 'invalid-feedback' : '';
+        $this->invalid = $model->hasError($attribute) ? ' is-invalid' : '';
     }
 
     public function __toString()
@@ -29,18 +35,29 @@ class Checkbox
         if($this->model->hasError($this->attribute)) {
             $this->message = $this->model->getFirstError($this->attribute);
         }
+        if(!empty($this->model->{$this->attribute})){
+            $this->checked = 'checked';
+        }
+
         return sprintf(
-            '<input class="%s" type="checkbox" name="%s" value="%s" %s>
-            <label class="%s">
-              <span>%s </span>
-              <a href="#" class="link">terms of service</a>
-            </label>',
-            $this->invalid,
+            '<div id="%s" class="form-field%s">
+              <div class="cb-container">
+                <input value="%s" name="%s" type="checkbox" %s %s>
+                <span class="checkbox">
+                  <img src="img/ic_checkmark.svg">
+                </span>
+              </div>
+              <div class="feedback">
+                %s <a href="#" class="link">terms of service</a>
+              </div>
+            </div>',
             $this->attribute,
-            $this->model->{$this->attribute},
+            $this->invalid,
+            $this->value,
+            $this->attribute,
+            $this->checked,
             $this->required,
-            $this->invalid_feedback,
-            $this->message
+            $this->feedback
         );
     }
 
