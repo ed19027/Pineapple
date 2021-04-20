@@ -7,7 +7,12 @@ class Form
 {
     public static function begin($action, $method, $option = '')
     {
-        echo sprintf('<form action="%s" method="%s" %s>', $action, $method, $option);
+        echo sprintf(
+            '<form action="%s" method="%s" %s>',
+            $action,
+            $method,
+            $option
+        );
         return new Form();
     }
 
@@ -21,9 +26,9 @@ class Form
         return new Input($model, $attribute, $rules);
     }
 
-    public function checkbox(Model $model, string $attribute)
+    public function checkbox(Model $model, string $attribute, string $value)
     {
-        return new Checkbox($model, $attribute);
+        return new Checkbox($model, $attribute, $value);
     }
 
 }
