@@ -1,0 +1,711 @@
+/* DOCUMENT */
+body {
+  margin: 0;
+  min-height: 1080px;
+  min-width: 320px;
+  font-family: Arial;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#F2F5FA));
+  background: linear-gradient(180deg, #FFFFFF 0%, #F2F5FA 100%);
+}
+
+@media (max-width: 1024px) {
+  body {
+    min-height: 812px;
+    font-size: 14px;
+    background: url("/../img/image_summer.jpg");
+    background-position: 60% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.link {
+  color: #131821;
+}
+
+.link:hover {
+  color: #4066A5;
+}
+
+.link:active {
+  color: #233759;
+}
+
+/* MAIN - LAYOUT */
+nav {
+  position: absolute;
+  width: 480px;
+  height: 40px;
+  margin: 100px 0px 0px 100px;
+  z-index: 1;
+  text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  nav {
+    position: relative;
+    width: 100%;
+    height: 66px;
+    margin: 0;
+    font-size: 14px;
+    background: #FFFFFF;
+  }
+}
+
+ul {
+  display: inline;
+  padding: 0;
+  list-style-type: none;
+}
+
+li.right {
+  margin-top: 16px;
+}
+
+@media (max-width: 1024px) {
+  li.right {
+    margin: 21px 20px 0px 0px;
+  }
+}
+
+li.right a {
+  line-height: 24px;
+  margin-left: 26px;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  color: #6A707B;
+}
+
+@media (max-width: 1024px) {
+  li.right a {
+    margin-left: 18px;
+  }
+}
+
+li.left a {
+  position: absolute;
+  width: 118px;
+  height: 40px;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+}
+
+@media (max-width: 1024px) {
+  li.left a {
+    width: 25px;
+    height: 40px;
+    margin: 10px 0px 0px 20px;
+  }
+}
+
+#pineapple {
+  position: absolute;
+  margin: 20px 0px 0px 15px;
+}
+
+@media (max-width: 1024px) {
+  #pineapple {
+    display: none;
+  }
+}
+
+h1 {
+  margin: 374px 0px 0px 140px;
+  width: 399px;
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 44px;
+  color: #131821;
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    width: 100%;
+    margin: 0;
+    font-size: 24px;
+    line-height: 34px;
+  }
+}
+
+h2 {
+  margin: 15px 0px 0px 140px;
+  width: 400px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  color: #6A707B;
+}
+
+@media (max-width: 1024px) {
+  h2 {
+    width: 100%;
+    margin: 10px 0 0 0;
+    font-size: 14px;
+    line-height: 26px;
+  }
+}
+
+/* SUBSCRIBED - VIEW */
+#cup {
+  margin: 269px 0 0 140px;
+}
+
+@media (max-width: 1024px) {
+  #cup {
+    margin: 30px 0 0 20px;
+  }
+}
+
+#cup + h1 {
+  margin: 30px 0px 0px 140px;
+}
+
+@media (max-width: 1024px) {
+  #cup + h1 {
+    margin: 39px 0 0 0;
+  }
+}
+
+/* SUBSCRIPTION - VIEW */
+.container {
+  position: absolute;
+  width: 680px;
+  height: 1080px;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    margin: 188px auto;
+    padding: 30px 20px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#F2F5FA));
+    background: linear-gradient(180deg, #FFFFFF 0%, #F2F5FA 100%);
+  }
+}
+
+@media (max-width: 746px) {
+  .container {
+    width: 60%;
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    width: 80%;
+  }
+}
+
+.container .line {
+  display: inline-block;
+  position: relative;
+  width: 400px;
+  height: 1px;
+  margin: 49px 0 0 140px;
+  border: 0;
+  border-top: 1px solid #E3E3E4;
+}
+
+@media (max-width: 1024px) {
+  .container .line {
+    width: 100%;
+    margin: 20px 0 0 0;
+  }
+}
+
+.container .social-icons {
+  width: 244px;
+  height: 46px;
+  margin: 40px 0px 0px 218px;
+}
+
+@media (max-width: 1024px) {
+  .container .social-icons {
+    width: 214px;
+    height: 46px;
+    margin: 15px auto 0px auto;
+  }
+}
+
+#fb {
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  cursor: pointer;
+  border: 2px solid #E3E3E4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 50%;
+}
+
+#fb:hover {
+  border-color: #4267B2;
+  background: #4267B2;
+  -webkit-box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+          box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+}
+
+#fb:hover > .fa-facebook-f {
+  opacity: 1;
+  color: #FFFFFF;
+}
+
+#fb:active {
+  border-color: #2F4A80;
+  background: #2F4A80;
+  -webkit-box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+          box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+}
+
+#fb .fa-facebook-f {
+  position: absolute;
+  top: 13px;
+  left: 16px;
+  opacity: 0.3;
+  color: #131821;
+}
+
+#ig {
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  margin-left: 66px;
+  font-size: 18px;
+  cursor: pointer;
+  border: 2px solid #E2E3E4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 50%;
+}
+
+@media (max-width: 1024px) {
+  #ig {
+    margin-left: 56px;
+  }
+}
+
+#ig:hover {
+  border-color: #C13584;
+  background: #C13584;
+  -webkit-box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+          box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+}
+
+#ig:hover > .fa-instagram {
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+#ig:active {
+  border-color: #8F2762;
+  background: #8F2762;
+  -webkit-box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+          box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+}
+
+#ig .fa-instagram {
+  position: absolute;
+  top: 12px;
+  left: 13px;
+  opacity: 0.3;
+  color: #131821;
+}
+
+#tt {
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  margin-left: 132px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 2px solid #E2E3E4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 50%;
+}
+
+@media (max-width: 1024px) {
+  #tt {
+    margin-left: 112px;
+  }
+}
+
+#tt:hover {
+  border-color: #1DA1F2;
+  background: #1DA1F2;
+  -webkit-box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+          box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+}
+
+#tt:hover > .fa-twitter {
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+#tt:active {
+  border-color: #177FBF;
+  background: #177FBF;
+  -webkit-box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+          box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+}
+
+#tt .fa-twitter {
+  position: absolute;
+  top: 13.5px;
+  left: 13px;
+  opacity: 0.3;
+  color: #131821;
+}
+
+#yt {
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  margin-left: 198px;
+  font-size: 15px;
+  cursor: pointer;
+  border: 2px solid #E2E3E4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 50%;
+}
+
+@media (max-width: 1024px) {
+  #yt {
+    margin-left: 168px;
+  }
+}
+
+#yt:hover {
+  border-color: #FF0000;
+  background: #FF0000;
+  -webkit-box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+          box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+}
+
+#yt:hover .fa-youtube {
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+#yt:active {
+  border-color: #CC0000;
+  background: #CC0000;
+  -webkit-box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+          box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+}
+
+#yt .fa-youtube {
+  position: absolute;
+  top: 32%;
+  left: 12.5px;
+  opacity: 0.3;
+  color: #131821;
+}
+
+.background {
+  margin-left: 680px;
+  height: 1080px;
+  background: url("/../img/image_summer.jpg");
+  background-position: left center;
+  background-size: cover;
+}
+
+@media (max-width: 1024px) {
+  .background {
+    display: none;
+  }
+}
+
+/* SUBSCRIPTION - VIEW */
+form[novalidate] {
+  position: relative;
+  width: 663px;
+  margin: 50px 0 0 100px;
+}
+
+@media (max-width: 1024px) {
+  form[novalidate] {
+    width: 100%;
+    max-width: 450px;
+    margin: 20px 0 0 0;
+  }
+}
+
+#email.is-invalid .feedback {
+  color: #d9534f;
+  margin-top: 15px;
+  margin-bottom: -33px;
+}
+
+@media (max-width: 1024px) {
+  #email.is-invalid .feedback {
+    margin-bottom: -10px;
+  }
+}
+
+#email.is-invalid .input-line {
+  background: #d9534f;
+}
+
+#email.is-invalid input {
+  border-color: #d9534f !important;
+}
+
+#email .input-line {
+  position: absolute;
+  width: 4px;
+  height: 70px;
+  background: #4066A5;
+}
+
+@media (max-width: 1024px) {
+  #email .input-line {
+    height: 60px;
+  }
+}
+
+#email input {
+  width: 663px;
+  height: 70px;
+  padding: 23px 100px 23px 44px;
+  font-size: 16px;
+  background: #FFFFFF;
+  border: 1px solid #E3E3E4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  #email input {
+    width: 100%;
+    height: 60px;
+    margin: 0;
+    padding: 18px 49px 18px 19px;
+  }
+}
+
+@media (max-width: 275px) {
+  #email input {
+    font-size: 13px;
+  }
+}
+
+#email input:focus {
+  outline: none;
+  -webkit-box-shadow: 0px 30px 40px rgba(19, 24, 33, 0.06);
+          box-shadow: 0px 30px 40px rgba(19, 24, 33, 0.06);
+}
+
+#email input:hover {
+  border: 1px solid #4066A5;
+  -webkit-box-shadow: 0px 30px 40px rgba(19, 24, 33, 0.06);
+          box-shadow: 0px 30px 40px rgba(19, 24, 33, 0.06);
+}
+
+#email input:hover ~ button.arrow {
+  background: url("/../img/ic_arrow_blue.svg");
+}
+
+#email input::-webkit-input-placeholder {
+  width: 227px;
+  height: 24px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #6A707B;
+}
+
+#email input:-ms-input-placeholder {
+  width: 227px;
+  height: 24px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #6A707B;
+}
+
+#email input::-ms-input-placeholder {
+  width: 227px;
+  height: 24px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #6A707B;
+}
+
+#email input::placeholder {
+  width: 227px;
+  height: 24px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #6A707B;
+}
+
+@media (max-width: 275px) {
+  #email input::-webkit-input-placeholder {
+    font-size: 13px;
+  }
+  #email input:-ms-input-placeholder {
+    font-size: 13px;
+  }
+  #email input::-ms-input-placeholder {
+    font-size: 13px;
+  }
+  #email input::placeholder {
+    font-size: 13px;
+  }
+}
+
+#email .arrow {
+  position: relative;
+  float: right;
+  width: 24px;
+  height: 14px;
+  margin: -42px 40px;
+  border-style: none;
+  outline: 0;
+  cursor: pointer;
+  background: url("/../img/ic_arrow.svg");
+}
+
+@media (max-width: 1024px) {
+  #email .arrow {
+    margin: -37px 15px 0px 0px;
+  }
+}
+
+#email .arrow:hover {
+  background: url("/../img/ic_arrow_blue.svg");
+}
+
+#tos {
+  position: relative;
+  width: 400px;
+  margin: 54px 0px 0px 40px;
+}
+
+@media (max-width: 1024px) {
+  #tos {
+    width: 100%;
+    margin: 20px 0 0 0;
+  }
+}
+
+#tos.is-invalid .cb-container .checkbox {
+  border-color: #d9534f;
+}
+
+#tos.is-invalid .feedback {
+  color: #d9534f;
+}
+
+#tos.is-invalid .feedback .link {
+  color: #d9534f;
+}
+
+#tos .cb-container {
+  display: inline;
+  position: relative;
+  width: 26px;
+  height: 26px;
+}
+
+#tos .cb-container input {
+  position: absolute;
+  top: -1.5px;
+  left: -3px;
+  height: 24px;
+  width: 24.5px;
+  z-index: 1;
+  cursor: pointer;
+  opacity: 0;
+}
+
+#tos .cb-container input:checked ~ .checkbox {
+  background: #4066A5;
+  border-color: #4066A5;
+  border-radius: 3px;
+}
+
+#tos .cb-container .checkbox {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background: #FFFFFF;
+  border: 1px solid #E3E3E4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 3px;
+}
+
+#tos .cb-container .checkbox img {
+  position: absolute;
+  top: 7px;
+  left: 5px;
+}
+
+#tos .feedback {
+  height: 28px;
+  margin-left: 41px;
+  line-height: 28px;
+  color: #6A707B;
+}
+
+@media (max-width: 1024px) {
+  #tos .feedback {
+    font-size: 15.5px;
+  }
+}
+
+/* EMAIL LIST - VIEW */
+.sidenav {
+  position: absolute;
+  min-width: 15%;
+  top: 24px;
+  left: 200px;
+  padding: 10px;
+  z-index: 1;
+  background: #f8f8f8;
+  overflow-x: hidden;
+}
+
+table {
+  text-align: center;
+  width: 600px;
+  margin: 32px 0 0 500px;
+  padding: 0 10px;
+  font-size: 14px;
+  line-height: 2;
+  border: 2px solid #9c9c9c;
+  border-collapse: collapse;
+}
+
+table tr, table th, table td {
+  padding: 0 10px;
+  font-size: 14px;
+  line-height: 2;
+  border: 2px solid #9c9c9c;
+  border-collapse: collapse;
+}
+/*# sourceMappingURL=style.css.map */
