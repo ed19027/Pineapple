@@ -8,10 +8,12 @@ class Subscription extends Model
     public string $email = '';
     public string $tos = '';
     public string $domain = '';
+    public string $createt_at = '';
+
     
     public function table(): string
     {
-        return 'emails'; //rename subscriptions
+        return 'subscriptions';
     }
 
     public function columns(): array
@@ -34,6 +36,12 @@ class Subscription extends Model
 
     public function save()
     {
+        $this->domain =  preg_replace(
+            '/(\S+)@(\S+)\.(\S+)/', 
+            '${2}', 
+            $this->email
+        );
+        $this->created_at = date('Y-m-d h:i:s', time());
         return parent::save();
     }
 }
