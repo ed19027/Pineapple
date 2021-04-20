@@ -1,6 +1,7 @@
 <?php
-
 namespace app\core\database;
+
+use app\core\Application;
 
 class Database
 {
@@ -33,8 +34,8 @@ class Database
      */
     public function migrate()
     {
-        $sql = file_get_contents(Application::$ROOT_DIR.'/juniortest.sql');
-        $this->PDO->exec($sql);
+        $sql = file_get_contents(Application::$ROOT_DIR.'\pineapple.sql');
+        self::$PDO->exec($sql);
         echo 'Tables and their contents have been successfully migrated';
     }
 
