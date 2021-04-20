@@ -20,6 +20,8 @@ abstract class DatabaseModel extends Model
     abstract public function columns(): array;
     
     /**
+     * Insert record in database table.
+     * 
      * Prepare SQL statement, bind app\models 
      * model values and execute in database.
      */
@@ -54,7 +56,7 @@ abstract class DatabaseModel extends Model
      * 
      * @param array $ids
      */
-    public static function delete($ids)
+    public static function delete(array $ids)
     {
         $class =  preg_replace(
             '/(\w+)\\\(\w+)\\\(\w+)/', 
@@ -94,13 +96,29 @@ abstract class DatabaseModel extends Model
         return $statement->fetchAll(\PDO::FETCH_CLASS, get_called_class());
     }
 
-    public static function sortBy($attr)
-    {   
-        return usort(self::all(), fn($a, $b) => strcmp($a->$attr, $b->$attr));
-    }
+    /**
+     * Get column with distinct records from database table.
+     * 
+     * Find class from which method is called and assume 
+     * that table name is class name in the plural. 
+     * Prepare SQL statement and execute.
+     * 
+     * @return array
+     */
+    public static function distinct(string $attr)
+    {
+        $class =  preg_replace(
+            '/(\w+)\\\(\w+)\\\(\w+)/', 
+            '${3}', 
+            get_called_class()
+        );
+        $table = strtolower($class).'s';
 
-    // private static function compare()
-    // {
-        
-    // }
+        $statement = Database::prepare(
+            "SELECT DISTINCT $attr FROM $table"
+        );
+        $statement->execute();
+
+        return $statement->fetchAll(\PDO::FETCH_COLUMN);
+    }
 }
