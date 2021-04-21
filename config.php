@@ -6,3 +6,4 @@ define('DB_PASSWORD', '');
 
 define('APP_DIR', __DIR__);
 define('APP_URL', 'http://localhost');
+define('APP_DTZ', 'Europe/Riga');
