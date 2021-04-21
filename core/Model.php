@@ -31,9 +31,10 @@ abstract class Model //abstract - avoids creating instance of that class
     abstract public function rules(): array;
 
     /**
-     * Take data from the Request and asigning to the properties of the app\models.
+     * Take data from the app\core\Request and
+     * asigning to the properties of the app\models.
      *
-     * @param  array $data
+     * @param array $data
      */
     public function load($data)
     {
@@ -58,8 +59,7 @@ abstract class Model //abstract - avoids creating instance of that class
                 if (is_array($ruleName)) {
                     $ruleName = $rule[0];
                 }
-                if (
-                    $ruleName === self::REQUIRED_EMAIL && !$value) {
+                if ($ruleName === self::REQUIRED_EMAIL && !$value) {
                     $this->addError($attribute, self::REQUIRED_EMAIL);
                 }
                 if ($ruleName === self::REQUIRED_TOS && !$value) {
