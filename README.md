@@ -67,5 +67,5 @@ Because of default localhost (with port 8000) is taken by WAMP server it is nece
 
 #### Now you you can access web pabe localy in your browser with url:
 ```url
-    localhost:%port%
+localhost:%port%
 ```
