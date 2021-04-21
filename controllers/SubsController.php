@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\core\Controller;
 use app\core\Request;
+use app\core\Response;
 use app\models\Subscription;
 
 class SubsController extends Controller
@@ -15,11 +16,13 @@ class SubsController extends Controller
      */
     public function index()
     {
+        $this->layout('empty');
         return $this->view('list', [
-            'subs' => Subscription::all()
+            'subs' => Subscription::all(),
+            'domains' => Subscription::distinct('domain')
         ]);
     }
-
+    
     /**
      * Show the form for creating a new resource.
      * Store a newly created resource in database.
