@@ -16,7 +16,7 @@ Download this project form GitHub, unzip, and put the 'pineapple' folder in wamp
 
 ### Auto-loading
 
-The core clases autoloading is done via composer autoloade. So if you don't have composer download and install it at (getcomposer.org). Whene you have composer command globaly available. 
+The core classes autoloading is done via composer autoload. So if you don't have composer download and install it at (getcomposer.org). Whene you have composer command globaly available. 
 #### Open command prompt cd to the project directory and execute 'composer init':
 ```bash
 C:\WINDOWS\system32> cd C:\wamp64\www\pineapple
