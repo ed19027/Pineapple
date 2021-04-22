@@ -5,19 +5,35 @@ use app\core\Model;
 
 class Input
 {
+    /**
+     * @param const The constants for variable $type and $required.
+     */
     const TEXT = 'text';
     const EMAIL = 'email';
     const REQUIRED = 'required';
 
+    /**
+     * @param Model|string The variables passed from the view in constructor.
+     */
     public Model $model;
     public string $attribute;
+    public array $rules;
     
+    /**
+     * @param string The dinamic variables. These are based on model state.
+     */
     public string $type;
     public string $placeholder;
-    public array $rules;
     public string $invalid;
     public string $required;
 
+    /**
+     * Input constructor.
+     *
+     * @param app\core\Model $model
+     * @param string $attribute
+     * @param string $value
+     */
     public function __construct(
         Model $model,
         string $attribute,
@@ -31,6 +47,11 @@ class Input
         $this->invalid = $model->hasError($attribute) ? ' is-invalid' : '';
     }
 
+    /**
+     * Return new object as a string by magic method __toString.
+     *
+     * @return string 
+     */
     public function __toString()
     {
         $rules = [];
@@ -57,18 +78,36 @@ class Input
         );
     }
 
+    /**
+     * Set Input field type - email.
+     * Method for using in chain.
+     *
+     * @return app\core\blade\form\Input
+     */
     public function email()
     {
         $this->type = self::EMAIL;
         return $this;
     }
 
+    /**
+     * Make Input field required.
+     * Method for using in chain.
+     *
+     * @return app\core\blade\form\Input
+     */
     public function required()
     {
         $this->required = self::REQUIRED;
         return $this;
     }
 
+    /**
+     * Set Input field placeholder - to passed string.
+     * Method for using in chain.
+     *
+     * @return app\core\blade\form\Input
+     */
     public function placeholder(string $ph)
     {
         $this->placeholder = $ph;
