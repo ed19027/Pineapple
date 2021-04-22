@@ -3,6 +3,9 @@ namespace app\core\tld;
 
 class TopLevelDomain
 {
+    /**
+     * @return array All possible domains and their transcript
+     */
     public static function transcript()
     {
         return [
