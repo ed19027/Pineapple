@@ -28,9 +28,6 @@ class Database
     /**
      * Execute migration tables and their content in database.
      * Can be called from command prompt by running 'php migration.php'.
-     *
-     * @param string $sql
-     * @return app\core\Database 
      */
     public function migrate()
     {
