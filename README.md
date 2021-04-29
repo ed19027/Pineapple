@@ -12,7 +12,7 @@ MySQL - 8.0.18
 
 To run the project localy on Windows OP system install WAMP server (download at www.wampserver.com).
 In installation select MySQL to be installed.
-Download this project form GitHub, unzip, and put the 'pineapple' folder in wamp64/www/ directory.
+Download this project from GitHub, unzip, and put the 'pineapple' folder in wamp64/www/ directory.
 
 ### Auto-loading
 
